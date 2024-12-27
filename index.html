@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trendyol Kar Hesaplama</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <div class="container">
+        <h1>Trendyol Kar Hesaplama</h1>
+        <button onclick="toggleTheme()" class="theme-toggle">
+            <i class="ri-sun-line light-icon"></i>
+            <i class="ri-moon-line dark-icon"></i>
+        </button>
+        <div class="calculator">
+            <div class="input-group">
+                <label for="maliyet">Ürün Maliyeti (TL):</label>
+                <input type="number" id="maliyet" step="0.01" min="0">
+            </div>
+            <div class="input-group">
+                <label for="satisFiyati">Satış Fiyatı (TL):</label>
+                <input type="number" id="satisFiyati" step="0.01" min="0">
+            </div>
+            <div class="input-group">
+                <label for="komisyonOrani">Komisyon Oranı (%):</label>
+                <input type="number" id="komisyonOrani" step="0.01" min="0" max="100" value="15">
+            </div>
+            <div class="input-group">
+                <label for="kdvOrani">KDV Oranı:</label>
+                <select id="kdvOrani">
+                    <option value="20">%20</option>
+                    <option value="10">%10</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="kargoFirmasi">Kargo Firması:</label>
+                <select id="kargoFirmasi">
+                    <option value="tyexpress">TY Express</option>
+                    <option value="ptt">PTT Kargo</option>
+                    <option value="aras">Aras Kargo</option>
+                    <option value="surat">Sürat Kargo</option>
+                    <option value="mng">MNG Kargo</option>
+                    <option value="yurtici">Yurtiçi Kargo</option>
+                </select>
+            </div>
+            <button onclick="karHesapla()">Hesapla</button>
+            <div class="results" id="results">
+                <!-- JavaScript ile doldurulacak -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
